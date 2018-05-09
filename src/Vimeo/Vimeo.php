@@ -553,6 +553,7 @@ class Vimeo
         $file = fopen($file_path, 'r');
 
         $curl_opts = array(
+            CURLOPT_TIMEOUT => 240,
             CURLOPT_POST => true,
             CURLOPT_CUSTOMREQUEST => 'PATCH',
             CURLOPT_INFILE => $file,
